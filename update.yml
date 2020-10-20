@@ -1,8 +1,7 @@
 ---
-- hosts: group1
+- hosts: all
   connection: ssh
   become: yes
-  #remote_user: worker
   vars:
     - lab_update: true
     - lab_save_facts: true

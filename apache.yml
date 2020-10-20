@@ -1,8 +1,7 @@
 ---
-- hosts: group1
+- hosts: webservers
   connection: ssh
   become: yes
-  #remote_user: worker
   vars:
     - lab_apache: true
   roles: 
