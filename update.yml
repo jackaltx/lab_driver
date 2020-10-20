@@ -1,0 +1,10 @@
+---
+- hosts: group1
+  connection: ssh
+  become: yes
+  #remote_user: worker
+  vars:
+    - lab_update: true
+    - lab_save_facts: true
+  roles: 
+    - lab_base

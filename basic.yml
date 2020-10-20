@@ -1,0 +1,12 @@
+---
+- hosts: group1
+  connection: ssh
+  become: yes
+  #remote_user: worker
+  vars:
+    - lab_baseline_packages: true
+    #- lab_base_banner: true
+    - lab_harden_ssh: true
+    - lab_pne: true
+  roles: 
+    - lab_base

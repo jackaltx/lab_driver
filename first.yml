@@ -1,0 +1,13 @@
+---
+- hosts: group1
+  connection: ssh
+  become: yes
+  tasks:
+
+  - name: Print the facts
+    debug:
+      var:  hostvars[inventory_hostname]
+
+  - local_action: copy content={{hostvars[inventory_hostname] | to_nice_json}} dest=facts/{{inventory_hostname}}
+  #- local_action: copy content={{hostvars[inventory_hostname] | to_nice_json}}  uid={{ lookup('env', 'SUDO_UID') }} gid={{ lookup('env', 'SUDO_GID') }} dest=facts/{{inventory_hostname}}
+
