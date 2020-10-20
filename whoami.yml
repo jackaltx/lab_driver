@@ -1,0 +1,12 @@
+- name: show return value of command module
+  hosts: all
+  tasks:
+    - name: capture output of id command
+      command: id -un
+      register: login
+    - debug: var=login
+    - debug: var=ansible_local
+    #- debug: msg="ansible_inventory_sources = {{ansible_inventory_sources}}"
+    #- debug: msg="ansible_check_mode = {{ansible_check_mode}}"
+    #- debug: msg="ansible_parent_role_names = {{ansible_parent_role_names}}"
+    #- debug: msg="ansible_parent_role_paths = {{ansible_parent_role_paths}}"

@@ -1,0 +1,9 @@
+---
+- hosts: group1
+  connection: ssh
+  become: yes
+  #remote_user: worker
+  vars:
+    - lab_apache: true
+  roles: 
+    - lab_service

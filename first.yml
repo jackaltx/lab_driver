@@ -1,5 +1,5 @@
 ---
-- hosts: group1
+- hosts: all
   connection: ssh
   become: yes
   tasks:
