@@ -4,7 +4,7 @@
 # under the outer tag "group1" there are very few legal values "hosts, vars, ... " TBD
 # the ansible_ variables are "magic variables"
 
-group1:
+all:
   hosts:
     worker_37_202:
       ansible_host: 192.168.37.202  
@@ -14,4 +14,13 @@ group1:
       ansible_host: 192.168.38.241 
       ansible_fqdn: worker2.homee37.vdev
       ansible_user: lavender
+
+webservers:
+  hosts:
+    worker_37_202:
+
+workers:
+  hosts:
+    worker_37_202:
+    worker_38_241:
 
