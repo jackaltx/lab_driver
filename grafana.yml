@@ -1,0 +1,14 @@
+---
+- hosts: grafana
+  connection: ssh
+  become: yes
+  vars:
+    - lab_baseline_packages: true
+    #- lab_base_banner: true
+    #- lab_harden_ssh: true
+    - lab_pne: true
+    - lab_grafana: true
+  roles: 
+    - lab_base
+    - lab_service
+
