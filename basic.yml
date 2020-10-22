@@ -1,8 +1,7 @@
 ---
-- hosts: group1
+- hosts: all
   connection: ssh
   become: yes
-  #remote_user: worker
   vars:
     - lab_baseline_packages: true
     #- lab_base_banner: true
