@@ -23,13 +23,47 @@ From the command line I can test the process by
 
 `ansible-playbook first.yml -K`
 
-and give the password on the command line.  This decouple sudo from ssh.
+and give the password on the command line.  This decouples sudo from ssh.
 
 ``
 
 ## inventory
 
 Using YAML.  This allows me to use differet users on each machine. As well as add machines to roles.  
+
+`
+all:
+  hosts:
+    worker_37_202:
+      ansible_host: 192.168.37.202  
+      ansible_fqdn: worker1.homee37.vdev
+      ansible_user: worker
+    server_38_12:
+      ansible_host: 192.168.38.12
+      ansible_fqdn: graylog2.homee37.vdev
+      ansible_user: lavender
+`
+
+Then later
+
+`
+ebservers:
+  hosts:
+    worker_37_202:
+
+grafana:
+  hosts:
+    server_38_11
+
+graylog:
+  hosts:
+    server_38_12
+
+workers:
+  hosts:
+    worker_37_202:
+    worker_38_241:
+`
 
 
 
