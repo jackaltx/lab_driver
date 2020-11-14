@@ -25,13 +25,11 @@ From the command line I can test the process by
 
 and give the password on the command line.  This decouples sudo from ssh.
 
-``
-
 ## inventory
 
 Using YAML.  This allows me to use differet users on each machine. As well as add machines to roles.  
 
-`
+```
 all:
   hosts:
     worker_37_202:
@@ -42,12 +40,11 @@ all:
       ansible_host: 192.168.38.12
       ansible_fqdn: graylog2.homee37.vdev
       ansible_user: lavender
-`
+```
 
 Then later
 
-`
-ebservers:
+<pre><code>Webservers:
   hosts:
     worker_37_202:
 
@@ -63,19 +60,15 @@ workers:
   hosts:
     worker_37_202:
     worker_38_241:
-`
-
-
-
+</code></pre>
 
 
 ## Misc
 
-
 ### Meaningless task list
 
-- [x] Write the press release
-- [ ] Update the website
+- [x] Finalize the featureset
+- [ ] Document
 - [ ] Contact the media
 
 
