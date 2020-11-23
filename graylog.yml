@@ -1,0 +1,9 @@
+---
+- hosts: graylog
+  connection: ssh
+  become: yes
+  vars:
+    - lab_graylog: true
+  roles: 
+    - lab_service
+

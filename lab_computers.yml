@@ -15,8 +15,12 @@ all:
       ansible_fqdn: worker2.homee37.vdev
       ansible_user: lavender
     server_38_11:
-      ansible_host: 192.168.38.11 
+      ansible_host: 192.168.38.11
       ansible_fqdn: grafana.homee37.vdev
+      ansible_user: lavender
+    server_38_12:
+      ansible_host: 192.168.38.12
+      ansible_fqdn: graylog2.homee37.vdev
       ansible_user: lavender
 
 
@@ -27,6 +31,10 @@ webservers:
 grafana:
   hosts:
     server_38_11
+
+graylog:
+  hosts:
+    server_38_12
 
 workers:
   hosts:
